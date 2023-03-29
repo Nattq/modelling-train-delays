@@ -12,7 +12,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 import os
 
 def scrap_bocznica():
-    filename = f"data//Scrapping_{datetime.now().strftime('%m-%d-%y_%H-%M-%S')}"
+    filename = f"data//scrapped_data//Scrapping_{datetime.now().strftime('%m-%d-%y_%H-%M-%S')}"
     #browse site and get table with all trains
     driver = webdriver.Chrome('chromedriver')
     driver.get('http://bocznica.eu/trains')
