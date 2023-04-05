@@ -70,14 +70,14 @@ def connect_data():
             df = pd.read_csv("data/scrapped_data/" + files[index])
         else:
             df_temp = pd.read_csv("data/scrapped_data/" + files[index])
-            df = pd.concat([df, df_temp]).drop_duplicates().reset_index(drop=True)
+            df = pd.concat([df, df_temp]).drop_duplicates(subset = ["nazwa_pociagu", "stacja_poczatkowa", "stacja_koncowa", "stacja_pomiaru", "data"]).reset_index(drop=True)
 
-    df.to_csv(f"data/data_updated.csv")
+    df.to_csv(f"data/data_updated.csv", index = False, encoding="utf-8-sig")
     
 
 
     
 
 if __name__ == "__main__":
-    scrap_bocznica()
+    #scrap_bocznica()
     connect_data()
