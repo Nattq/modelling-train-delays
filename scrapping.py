@@ -79,5 +79,5 @@ def connect_data():
     
 
 if __name__ == "__main__":
-    #scrap_bocznica()
+    scrap_bocznica()
     connect_data()
