@@ -1,0 +1,15 @@
+Instukcja dla pliku df_z_czasami_przejazdu.csv, żeby nie googlować jak zapomnę, a może komuś się przyda.
+
+Zapisałam nazwy krawędzi do krotek, co po wczytaniu przez pandasa zamienia się na stringi. 
+
+JAK TO NAPRAWIĆ
+
+Po wczytaniu robimy:
+
+import ast
+df['super_krawedz'] = df['super_krawedz'].apply(ast.literal_eval)
+df["mini_krawedz"] = df["mini_krawedz"].apply(ast.literal_eval)
+
+Dodatkowo, żeby data_czas_rozkładowy była datą, robimy:
+
+df["data_czas_rozkładowy"] = pd.to_datetime(list(df["data_czas_rozkładowy"]), format="%Y-%m-%d %H:%M:%S")
