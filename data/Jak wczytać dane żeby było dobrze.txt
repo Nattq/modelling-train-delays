@@ -1,4 +1,4 @@
-Instukcja dla pliku df_z_czasami_przejazdu.csv, żeby nie googlować jak zapomnę, a może komuś się przyda.
+Instukcja dla pliku df_z_czasami_przejazdu.csv i późniejszych, żeby nie googlować jak zapomnę, a może komuś się przyda.
 
 Zapisałam nazwy krawędzi do krotek, co po wczytaniu przez pandasa zamienia się na stringi. 
 
